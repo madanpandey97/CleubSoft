@@ -1,0 +1,320 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Page title -->
+    <title>CleubSoft</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'cleub/css/newstyle.css' %}">
+
+  <!--  <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-persimmon.css' %}" title="theme-persimmon">
+   <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-atomic-tangerine.css' %}" title="theme-atomic-tangerine">
+    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-yellow-sea.css' %}" title="theme-yellow-sea">
+    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-rio-grande.css' %}" title="theme-rio-grande">
+    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-vida-loca.css' %}" title="theme-vida-loca">
+    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-mountain-meadow.css' %}" title="theme-mountain-meadow">
+    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-java.css' %}" title="theme-java">
+    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-mariner.css' %}" title="theme-mariner">
+    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-medium-purple.css' %}" title="theme-medium-purple">
+    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-lavender-magenta.css' %}" title="theme-lavender-magenta">-->
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+<!-- /Preloader -->
+
+<!-- Header -->
+<header id="home" class="header">
+
+    <!-- Navigation -->
+    <nav id="navigation" class="navbar affix">
+
+        <!-- Company Information -->
+        <div class="information hidden-sm hidden-xs">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Feedback -->
+                    <div class="col-md-7">
+                        <a href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom" class="iframe-popup"><span class="icon icon_pin_alt"></span> Shri Mata Vaishno Devi University</a>
+                        <a href="#"><span class="icon icon_mail_alt"></span> support@cleubsoft.com</a>
+                        <a href="#"><span class="icon icon_phone"></span> +91 9858900094</a>
+                    </div>
+                    <!-- /Feedback -->
+
+                    <!-- Social -->
+                    <div class="col-md-5">
+                        <ul class="social">
+                            <li><a href="#" class="fa fa-fw fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-fw fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-fw fa-google-plus"></a></li>
+                           
+                        </ul>
+                    </div>
+                    <!-- /Social -->
+
+                </div>
+            </div>
+        </div>
+        <!-- /Company Information -->
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Navigation Header -->
+                    <div class="navbar-header">
+
+                        <!-- Toggle Button -->
+                        <button type="button"
+                                class="navbar-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#main-menu"
+                                aria-expanded="false"
+                                aria-controls="main-menu">
+
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+
+                        </button>
+                        <!-- /Toggle Button -->
+
+                        <!-- Brand -->
+                        <a href="#" class="brand">
+
+                            <!-- Logo Big -->
+                            <img src="{% static 'cleub/images/logo.jpg' %}" class="logo-big" alt="">
+                            <!-- /Logo Big -->
+
+                            <!-- Logo Small -->
+                            <img src="{% static 'cleub/images/logo.jpg' %}" class="logo-small" alt="">
+                          
+
+                        </a>
+                        <!-- /Brand -->
+
+                    </div>
+                    <!-- /Navigation Header -->
+
+                    <!-- Navigation -->
+                    <div id="main-menu" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{% url 'cleub:index' %}">Home</a></li>
+                            <li><a href="{% url 'cleub:about' %}">About</a></li>
+                           <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+    
+      </form>
+                            <li><a href="">Blog</a></li>
+                            <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Sign UP</a></li>
+           
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+                            
+                        </ul>
+                    </div>
+                    <!-- /Navigation -->
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- /Navigation -->
+
+</header>
+
+{% block content %}{% endblock %}
+
+<!-- Footer -->
+<footer class="footer section-small">
+    <div class="container">
+        <div class="row">
+
+            <!-- Footer Column -->
+            <div class="col-md-3 col-xs-6 footer-col">
+
+                <!-- Footer Logo -->
+                <div class="logo">
+                    <img src="{% static 'cleub/images/cleubsoft.jpg' %}" alt="" style="height:50px; width: 100px;">
+                </div>
+                <!-- /Footer Logo -->
+
+                <!-- Footer Text -->
+                <p class="text">
+                    It is a long established fact that a reader will be distracted by the readable.
+                </p>
+                <!-- /Footer Text -->
+
+                <hr>
+
+                <!-- Copyright -->
+                <p class="copyright">
+                    Copyright &copy; 2016-2017 <strong>Cleubsoft</strong>
+                </p>
+                <!-- /Copyright -->
+
+                <!-- Footer Social -->
+                <ul class="social-inline">
+                    <li><a href="#" class="fa fa-fw fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-fw fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-fw fa-google-plus"></a></li>
+                 
+                </ul>
+                <!-- /Footer Social -->
+
+            </div>
+            <!-- /Footer Column -->
+
+            <!-- Footer Column -->
+            <div class="col-md-3 col-xs-6 footer-col">
+
+                <h3 class="title">Cleubsoft </h3>
+
+             
+                 <ul class="menu">
+ <li><a href="#">Cleubsoft protocol</a></li>
+                    <li><a href="#">Send Feedback</a></li>
+                    <li><a href="#">We are hiring</a></li>
+                    <li><a href="#">Term &amp; Condition</a></li>
+                      </ul>
+            </div>
+            <!-- /Footer Column -->
+
+            <!-- Footer Column -->
+            <div class="col-md-2 col-xs-6 footer-col">
+
+                <h3 class="title">Site Menu</h3>
+
+                <!-- Footer Menu -->
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <!-- /Footer Menu -->
+
+            </div>
+            <!-- /Footer Column -->
+
+            <!-- Footer Column -->
+            <div class="col-md-4 col-xs-6 footer-col">
+
+                <h3 class="title">Signup to <span class="text-theme">Newsletter</span></h3>
+
+                <!-- Footer Signup Form -->
+                <div class="signup-form">
+                    <form method="post" class="form-inline">
+                        <div class="form-group">
+                           {% csrf_token %}
+                            {{ form1|crispy }}
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-theme"><i class="fa fa-fw fa-envelope"></i></button>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- /Footer Signup Form -->
+
+                <hr>
+
+                <!-- Footer Tags -->
+                <div class="tags">
+                  
+                </div>
+                <!-- /Footer Tags -->
+
+            </div>
+            <!-- /Footer Column -->
+
+        </div>
+    </div>
+</footer>
+<!-- /Footer -->
+
+<!-- Scroll To Top -->
+<div id="scroll-to-top" class="scroll-to-top">
+    <i class="icon fa fa-angle-up"></i>
+</div>
+<!-- /Scroll To Top -->
+
+<!-- Modal: Result Message -->
+<div class="modal fade" id="result" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">Sending message</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="result-icon">
+                    <div class="icon-border">
+                        <svg version="1.1" xmlns="" viewBox="0 0 16 16" preserveAspectRatio="none">
+                            <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+                        </svg>
+                        <i class="icon fa fa-check"></i>
+                    </div>
+                </div>
+
+                <p class="modal-result h4 text-center"></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'cleub/js/jquery-2.2.0.min.js' %}"></script>
+<script src="{% static 'cleub/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'cleub/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'cleub/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'cleub/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'cleub/js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'cleub/js/wow.min.js' %}"></script>
+<script src="{% static 'cleub/js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static 'cleub/js/jquery.appear.js' %}"></script>
+<script src="{% static 'cleub/js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'cleub/js/general.js' %}"></script>
+<!-- /SCRIPTS -->
+
+
+
+
+</div>
+
+</body>
+
+</html>

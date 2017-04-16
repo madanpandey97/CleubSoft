@@ -1,0 +1,90 @@
+
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section class="section-page-header">
+    <div class="container">
+        <div class="row">
+
+            <!-- Page Title -->
+            <div class="col-md-8">
+                <h1 class="title">Contact</h1>
+                <div class="subtitle">We turn your ideas into reality  </div>
+            </div>
+            <!-- /Page Title -->
+
+            <!-- Breadcrumbs -->
+            <div class="col-md-4">
+                <ul class="breadcrumb">
+                    <li><i class="fa fa-fw fa-home"></i> <a href="#">Home</a></li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <!-- /Breadcrumbs -->
+
+        </div>
+    </div>
+</section>
+<!-- /Section: Page Header -->
+
+<!-- Main -->
+<main class="main-container">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Contact Form -->
+            <div class="col-md-8 contact-form fadeIn wow" data-wow-duration="1.3s">
+
+                <h3 class="title">Send Message</h3>
+ <form class="form-group" method="post">
+            <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-8">
+            {% csrf_token %}
+            {{ form|crispy }}
+            </div>
+
+            </div>
+           <div class="row">
+                            <div class="form-group col-md-12 text-center">
+                                <button type="submit" class="btn btn-theme"><i class="fa fa-fw fa-paper-plane-o"></i> Send Message</button>
+                            </div>
+                        </div>
+
+                    </form>
+            </div>
+            <!-- /Contact Form -->
+
+            <!-- Address -->
+            <div class="col-md-4 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.7s">
+
+                <h3 class="title">Information</h3>
+                <p>
+                    Drop us mail we will contact you soon.
+                </p>
+
+                <ul class="contact-information">
+                    <li><i class="icon fa fa-fw fa-globe"></i> <span> Office</span><br> 2nd Floor B-C Junction 
+                                                                                    Business Incubation Center 
+                                                                                    SMVD University Katra 
+                                                                                    Jammu, J&K-182320</li>
+                    <li><i class="icon fa fa-fw fa-envelope"></i><span>E-mail</span> support@cleubsoft.com</li>
+                    <li><i class="icon fa fa-fw fa-phone"></i><span>Phone</span> +91 9858900094</li>
+                </ul>
+
+            </div>
+            <!-- /Address -->
+
+        </div>
+
+    </div>
+
+    
+
+</main>
+<!-- /Main -->
+{% endblock  %}
