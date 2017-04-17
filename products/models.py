@@ -38,7 +38,7 @@ class Product(models.Model):
 	class Meta:
 		ordering = ["-title"]
 
-	def __unicode__(self): #def __str__(self):
+	def __str__(self): #def __str__(self):
 		return self.title 
 
 	def get_absolute_url(self):
@@ -61,7 +61,7 @@ class Variation(models.Model):
 	active = models.BooleanField(default=True)
 	inventory = models.IntegerField(null=True, blank=True) #refer none == unlimited amount
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.title
 
 	def get_price(self):
@@ -69,13 +69,6 @@ class Variation(models.Model):
 			return self.sale_price
 		else:
 			return self.price
-
-	#def get_html_price(self):
-	#	if self.sale_price is not None:
-		#	html_text = "<span class='sale-price'>%s</span> <span class='og-price'>%s</span>" %(self.sale_price, self.price)
-	#	else:
-		#	html_text = "<span class='price'>%s</span>" %(self.price)
-	#	return mark_safe(html_text)
 
 	def get_absolute_url(self):
 		return self.product.get_absolute_url()
@@ -108,7 +101,7 @@ class ProductImage(models.Model):
 	product = models.ForeignKey(Product)
 	image = models.ImageField(upload_to=image_upload_to)
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.product.title
 
 # Product Category
@@ -121,7 +114,7 @@ class Category(models.Model):
 	active = models.BooleanField(default=True)
 	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.title
 
 
@@ -151,7 +144,7 @@ class ProductFeatured(models.Model):
 	make_image_background = models.BooleanField(default=False)
 	active = models.BooleanField(default=True)
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.product.title
 
 

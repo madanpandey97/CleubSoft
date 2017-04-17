@@ -36,19 +36,17 @@ def index(request):
 
 
 def thanks(request):
-    context{
+    context={
         'title':"Cleub Home Automation",
-        'decription:"Home Automation, Home Security,Li-Fi",
+        'decription':"Home Automation Home Security Li-Fi",
     }
     return render(request, 'thanks.html',context)
-
 def about(request):
-    context{
-        'about_title':"Cleub Home Automation",
-        'about_decription:"Home Automation, Home Security,Li-Fi",
+    context={
+        'title':"Cleub Home Automation",
+        'decription':"Home Automation Home Security Li-Fi",
     }
-
-	return render(request, 'about.html',context)
+    return render(request, 'about.html',context)
 
 def services(request):
 
