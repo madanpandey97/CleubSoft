@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 import os
 import sys
 
-path = '/home/pythonanywhereusername/cleubsoft'  # use your own PythonAnywhere username here
+path = '/home/pythonanywhereusername/CleubSoft'  # use your own PythonAnywhere username here
 if path not in sys.path:
     sys.path.append(path)
 
