@@ -5,12 +5,18 @@ from django.http import Http404
 from django.template import loader
 from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
+
+from products.models import ProductFeatured, Product,PartnerImage
 from .forms import ContactForm,GetInTouchForm
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template import Context
 
 def index(request): 
+    featured_image = ProductFeatured.objects.filter(active=True).order_by("?").first()
+    products = Product.objects.all().order_by("?")[:6]
+    products2 = Product.objects.all().order_by("?")[:6]
+    partner = PartnerImage.objects.all()
     form = ContactForm()
     if request.method=='POST':
         form = ContactForm(request.POST)
@@ -30,6 +36,10 @@ def index(request):
     context = {
         'form':form,
         'form1':form1,
+        "featured_image":featured_image,
+        "products":products,
+        "products2":products2,
+        "partner":partner
     }
  
     return render(request, "index.html",context)

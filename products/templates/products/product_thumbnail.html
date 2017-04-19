@@ -1,11 +1,20 @@
 
-<div class="thumbnail text-center">
-<h4><a href='{{ product.get_absolute_url }}'>{{ product.title }}</a></h4>
-	{% if product.get_image_url %}
-	<a href='{{ product.get_absolute_url }}'><img id='img' class='img-responsive' src='{{ product.get_image_url }}' /></a><br/>
-	{% endif %}
 
-	{% if price == "True" %}
-		{{ product.variation_set.first.get_html_price }}
-	{% endif %}
-</div>
+
+
+
+
+
+                       <div class="media services-wrap wow fadeInDown shadow-z-2">
+                        <div class="pull-left col-sm-6">
+                            <img class="img-responsive"  height="100" width="100" src='{{ product.get_image_url }}'>
+                        </div>
+                        <div class="media-body">
+                            <a href="{{ product.get_absolute_url }}"><p class="media-heading" style="font-size:18px; color:#e55b5b;">{{ product.title }}</p></a>
+                            
+                        <br>
+                 <a href="{{ product.get_absolute_url }}">
+ <button  class="btn btn-theme">Know More</button></a><br><br>
+                    </div>
+                    </div>
+               

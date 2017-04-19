@@ -148,3 +148,9 @@ class ProductFeatured(models.Model):
 		return self.product.title
 
 
+class PartnerImage(models.Model):
+	title = models.CharField(max_length=50,null=True,blank=True)
+	images = models.ImageField(upload_to='partner')
+
+	def __str__(self):
+		return self.title

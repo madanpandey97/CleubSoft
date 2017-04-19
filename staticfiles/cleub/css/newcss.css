@@ -1,0 +1,252 @@
+
+.socialtest ul li a{
+  font-size:20px;
+  height: 50px;
+  width: 50px;
+
+} 
+#feature {
+
+  padding-bottom: 40px;
+
+}
+
+.features{
+  padding: 0;
+}
+
+.feature-wrap {
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+
+.feature-wrap h2{
+  margin-top: 10px;
+}
+
+.feature-wrap .pull-left {
+  margin-right: 25px;
+}
+
+.feature-wrap i{
+  font-size: 48px;
+  height: 110px;
+  width: 110px;
+  margin: 3px;
+  border-radius: 100%;
+  line-height: 110px;
+  text-align:center;
+  background:#a8a8a8;
+  color: #c52d2f;
+  border: 3px solid #ffffff;
+  box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  float: left;
+  margin-right: 25px;
+}
+
+.feature-wrap i:hover {
+  background: #a8a8a8;
+  color: #fff;
+  box-shadow: inset 0 0 0 5px #a8a8a8;
+  -webkit-box-shadow: inset 0 0 0 5px #a8a8a8;
+}
+
+.media>.pull-left{
+  margin-right: 20px;
+}
+
+.media>.pull-right{
+  margin-left: 20px;
+}
+
+.services-wrap {
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0 0 40px;
+  
+}
+
+.services-wrap h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.services-wrap .pull-left {
+  margin-right: 20px;
+}
+
+.add-to-cart {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border-radius: 0.25em;
+  border: none;
+  padding: .6em 1.2em;
+  background-color: #f82f53;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+        .modal-dialog {
+          width: 700px; /* New width for default modal */
+        }
+        .modal-sm {
+          width: 350px; /* New width for small modal */
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .modal-lg {
+          width: 950px; /* New width for large modal */
+        }
+    }
+
+
+    
+
+#recent-works .col-xs-12.col-sm-4.col-md-3{
+  padding: 0;
+}
+
+#recent-works{
+    padding-bottom: 70px;
+}
+
+.recent-work-wrap {
+  position: relative;
+}
+
+.recent-work-wrap img{
+  width: 100%;
+}
+
+.recent-work-wrap .recent-work-inner{
+  top: 0;
+  background: transparent;
+  opacity: .8;
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.recent-work-wrap .recent-work-inner h3{
+  margin: 10px 0;
+}
+
+.recent-work-wrap .recent-work-inner h3 a{
+  font-size: 24px;
+  color: #fff;
+}
+
+.recent-work-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 0;
+  background: #c52d2f;
+  color: #fff;
+  vertical-align: middle;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;  
+  padding: 30px;
+}
+
+.recent-work-wrap .overlay .preview {
+  bottom: 0;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 0;
+  background: transparent;
+  text-align: center;
+  color: #fff;
+}
+
+.recent-work-wrap:hover .overlay {
+  opacity: 1;
+}
+
+#services .lead,
+#services h2{
+  color: #fff;
+}
+
+.services-wrap {
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0 0 40px;
+}
+
+.services-wrap h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.services-wrap .pull-left {
+  margin-right: 20px;
+}
+
+.section-pattern {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.sponsors .section-padding {
+    padding: 200px 0px;
+}
+.sponsors .section-title {
+    font-weight: 400;
+}
+.sponsors .section-details {
+    padding-top: 0px;
+}
+.sponsors-logo img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.sponsors-logo a:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+/* 9 ------- Blog Section Styles --------*/
+
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+
+@media (min-width: 1100px) {
+  .container {
+    width: 93%;
+  }
+}

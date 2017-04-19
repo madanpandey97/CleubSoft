@@ -30,28 +30,28 @@ $(".variation_select").change(function(){
 
 
 {% block content %}
-<div class='row'>
+
+<main class="main-container">
+    <div class="container">
+
+        <div class="row">
+<br>
 
 <div class='col-sm-8'>
-<h2>{{ object.title }}</h2>
+
 
 {% if object.get_image_url %}
 <div>
 <img id='img' class='img-responsive' src='{{ object.get_image_url }}' />
 </div>
 {% endif %}
-
-
-
-<p class='lead'>
-{{ object.description }}
-</p>
 </div>
-
 
 <!-- Product Sidebar -->
 <div class='col-sm-4'>
-
+<br><br>
+    <h3 class="title">{{ object.title }}</h3>
+<hr>
 
 {% if object.variation_set.count > 1 %}
 <h3 id='price'>{{ object.variation_set.first.price }}</h3>
@@ -74,7 +74,13 @@ $(".variation_select").change(function(){
 
 
 {% endif %}
+
 <br/>
+<hr>
+
+<p class="text-justify">
+{{ object.description }}
+</p>
 <a href="#">Add to Cart</a>
 
 
@@ -90,9 +96,20 @@ Share<br/>
 </p>
 
 <hr/>
+
+
+</div>
+ </div>
+  </div>
+
+
+    <section >
+        <div class="container" style="background-color: #f5f5f5;">
+
+
 <h4>Related Products</h4>
 
-	<div class='row'>
+	<div class='row' >
 	{% for product in related %}
 
 		<div class='col-xs-6'>
@@ -102,16 +119,14 @@ Share<br/>
 	{% endfor %}
 
 		</div>
-
-
 </div>
-<!-- End Product Sidebar -->
-
-
-
-
-</div>
-
+</section>
+    <br>
+    <br>
+      <br>
+    <br>
+    <br>
+</main>
 
 
 {% endblock %}

@@ -1,12 +1,15 @@
 
-<div class='row'>
-{% for product in object_list %}
-	<div class='col-xs-4 {{ col_class_set }}'>
-	{% include "products/product_thumbnail.html" with product=product price="True" %}
-	</div>
-	{% if not col_class_set %}
-{% cycle '' '' '</div><div class="row">' %}
-{% endif %}
-{% endfor %}
 
+
+    <section id="projects" class="section-small bg-light-gray">
+        <div class="container">
+
+            <div class="row mt">
+{% for product in object_list %}
+<div class="col-md-6 {{ col_class_set }} col-sm-6 fadeIn wow  " data-wow-duration="1.3s" >
+    {% include "products/product_thumbnail.html" with product=product price="True" %}
+ </div>
+   {% endfor %}
 </div>
+</div>
+</section>

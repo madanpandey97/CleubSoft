@@ -6,7 +6,7 @@
 <div class="slider owl-carousel owl-theme">
 
     <!-- Slide -->
-    <div class="item mask" style="background: url({% static 'cleub/images/w1.jpeg' %}) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+    <div class="item mask" style="background: url({% static 'cleub/images/e2.jpg' %}) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
 
         <div class="container height-100p">
             <div class="row height-100p">
@@ -34,7 +34,7 @@
     <!-- /Slide -->
 
     <!-- Slide -->
-    <div class="item mask" style="background: url({% static 'cleub/images/w5.jpg' %}) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+    <div class="item mask" style="background: url({% static 'cleub/images/e1.jpg' %}) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
 
         <div class="container height-100p">
             <div class="row height-100p">
@@ -69,10 +69,36 @@
 <main class="main-container">
 
     <!-- Section: About -->
-    <section id="about" class="section">
-        <div class="container">
+    <section id="about" class="section" style="background-color: #1fb7a4;">
+        <div class="container" style="background-color: #f5f5f5; margin-top:-4%;">
+<br>
+             <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <header class="text-center feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.4s">
+<i class="fa fa-handshake-o" aria-hidden="true"></i>
 
-            <!-- Section Header -->
+                        <h2 class="section-title"  >
+Our Partner &nbsp;<span class="text-theme"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+
+</span></h2>
+                        <p class="section-subtitle">We Take care of our customer requirement.</p>
+                    </header>
+                </div>
+            </div><br>
+<hr>
+<br><br>
+          <div class="row">
+
+              {% for partners in partner %}
+                <div class="col-md-3 col-sm-6 feature fadeIn wow" data-wow-duration="1.3s">
+              <img src="{{partners.images.url}}" style="height: 90px; width: 130px;" class="fadeIn wow" data-wow-duration="1.3s">
+            </div>
+              {% endfor %}  
+         
+          </div>
+              
+<!--
+        
             <div class="row" style="display: none">
                 <div class="col-md-6 col-md-offset-3">
                     <header class="text-center">
@@ -81,11 +107,10 @@
                     </header>
                 </div>
             </div>
-            <!-- /Section Header -->
-
+          
             <div class="row">
 
-                <!-- Feature Block -->
+          
                 <div class="col-sm-4 feature fadeIn wow" data-wow-duration="1.3s">
                     <span class="icon_link_alt icon"></span>
                     <div class="h3 title">Software Development</div>
@@ -94,9 +119,7 @@
                          </p>
                     <a href="#" class="btn btn-theme">Read more</a>
                 </div>
-                <!-- /Feature Block -->
-
-                <!-- Feature Block -->
+             
                 <div class="col-sm-4 feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.4s">
                     <span class="icon_tablet icon"></span>
                     <div class="h3 title">Web Development</div>
@@ -105,9 +128,7 @@
                         </p>
                     <a href="#" class="btn btn-theme">Read more</a>
                 </div>
-                <!-- /Feature Block -->
 
-                <!-- Feature Block -->
                 <div class="col-sm-4 feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.8s">
                     <span class="icon_mobile icon"></span>
                     <div class="h3 title">Android App Development</div>
@@ -117,139 +138,72 @@
                     <a href="#" class="btn btn-theme">Read more</a>
                 </div>
               
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Section: More Features -->
-    <section id="more-features" class="section">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="row">
+--><hr>
+            
+            <div class="row mt">
                 <div class="col-md-6 col-md-offset-3">
                     <header class="text-center">
-                        <h2 class="section-title">Our salient<span class="text-theme">Features</span></h2>
+                        <h2 class="section-title">Cleub Feature&nbsp;<span class="text-theme">Product</span></h2>
                         <p class="section-subtitle">We Take care of our customer requirement.</p>
-                    </header>
+                    </header><br>
+                           <hr><br>
                 </div>
+    
+
+              
+                    {% include "products/products.html" with object_list=products2 %}
             </div>
-            <!-- /Section Header -->
+            
 
-            <!-- Section Content -->
-            <div class="row section-content zoomIn wow">
 
-                <!-- Feature Block -->
-                <div class="col-md-4 col-sm-6 more-feature">
-                    <div class="media">
-                        <div class="media-left">
-                            <span class="icon_mug icon"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="title">Versatility</h3>
-                            <p class="description">
-                                CleubSoft provide versatility in its all product, so that it can easily meet the clients requirement, because Customer satisfaction is our most important concern of CleubSoft.
-                            </p>
-                        </div>
-                    </div>
+<hr>
+
+            <div class="row" >
+                <div class="col-md-6 col-md-offset-3">
+                    <header class="text-center">
+                        <h2 class="section-title">Cleub &nbsp;<span class="text-theme">Technology</span></h2>
+                        <p class="section-subtitle">We Take care of our customer requirement.</p>
+                    </header><br>
+                           <hr><br>
                 </div>
-                <!-- /Feature Block -->
-
-                <!-- Feature Block -->
-                <div class="col-md-4 col-sm-6 more-feature">
-                    <div class="media">
-                        <div class="media-left">
-                            <span class="icon_easel icon"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="title">Services to customer
-
-</h3>
-                            <p class="description">
-                                Our one of the finest service and solution team keeps in touch with them, solving every possible aspect of any type of complaints or issue which makes our product even better then before.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Feature Block -->
-
-                <!-- Feature Block -->
-                <div class="col-md-4 col-sm-6 more-feature">
-                    <div class="media">
-                        <div class="media-left">
-                            <span class="icon_puzzle icon"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="title">Customisation according to the customer</h3>
-                            <p class="description">
-                                We provide full customisation facility for our customers in terms of GUI, services and additional features,in terms of the incoming of new technologies.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Feature Block -->
-
-                <!-- Feature Block -->
-                <div class="col-md-4 col-sm-6 more-feature">
-                    <div class="media">
-                        <div class="media-left">
-                            <span class="icon_mobile icon"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="title">Modular compatibility to applications</h3>
-                            <p class="description">
-                             we provide integration of different user-specific modules with their application, charging them with the most reasonable amount.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Feature Block -->
-
-                <!-- Feature Block -->
-                <div class="col-md-4 col-sm-6 more-feature">
-                    <div class="media">
-                        <div class="media-left">
-                            <span class="icon_heart_alt icon"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="title">Made With Love</h3>
-                            <p class="description">
-                                We take care of all the necessary need of our customer & customize product accordingly so that, It us easy to use.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Feature Block -->
-
-                <!-- Feature Block -->
-                <div class="col-md-4 col-sm-6 more-feature">
-                    <div class="media">
-                        <div class="media-left">
-                            <span class="icon_cogs icon"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="title">24/7 Support</h3>
-                            <p class="description">
-                               CleubSoft Offer 24/7 hours support for its product so that, the Client  can contact any to our care center.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Feature Block -->
-
+    
             </div>
-            <!-- /Section Content -->
+          
+            <div class="row">
+
+          
+                <div class="col-sm-4 feature fadeIn wow" data-wow-duration="1.3s">
+                    <span ><i class="fa fa-bolt 2x" aria-hidden="true"></i></span>
+                    <div class="h3 title">Software Development</div>
+                    <p class="description">
+                        We would be delighted to help you with any custom software development.
+                         </p>
+                    <a href="#" class="btn btn-theme">Read more</a>
+                </div>
+             
+                <div class="col-sm-4 feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                    <span class="icon_tablet icon"></span>
+                    <div class="h3 title">Web Development</div>
+                    <p class="description">
+                        From strategy to design and development, we are here through every step of the website development process.
+                        </p>
+                    <a href="#" class="btn btn-theme">Read more</a>
+                </div>
+
+                <div class="col-sm-4 feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                    <span class="icon_mobile icon"></span>
+                    <div class="h3 title">Android App Development</div>
+                    <p class="description">
+                    We design and develop amazing smartphone application that look great and are simple to use.
+                    </p>
+                    <a href="#" class="btn btn-theme">Read more</a>
+                </div>
 
         </div>
     </section>
-    <!-- /Section: More Features -->
 
-    <!-- Section: Statistics -->
     <section id="statistics" class="section bg-tuna">
-        <div class="container">
+        <div class="container" >
 
             <div class="row">
 
@@ -292,19 +246,25 @@
     <!-- /Section: Statistics -->
 
     <!-- Section: Best Features -->
-    <section id="beast-features" class="section">
-        <div class="container">
+    <section id="beast-features" class="section" style="background-color: #1fb7a4; margin-bottom:-50px;">
+        <div class="container" style="background-color: #f5f5f5; margin-top:-4%;">
 
-            <!-- Section Header -->
-            <div class="row">
+            <br>
+             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title">Best Features in <span class="text-theme">Latest Product</span></h2>
-                        <p class="section-subtitle">It is best suited for School Management and their record</p>
+                    <header class="text-center feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.4s">
+<i class="fa fa-handshake-o" aria-hidden="true"></i>
+
+                        <h2 class="section-title"  >
+Our Partner &nbsp;<span class="text-theme"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+
+</span></h2>
+                        <p class="section-subtitle">We Take care of our customer requirement.</p>
                     </header>
                 </div>
             </div>
-            <!-- /Section Header -->
+<hr>
+
 
             <!-- Section Content -->
             <div class="row section-content">
@@ -316,23 +276,20 @@
 
                     <ul class="list">
                         <li>
-                            <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.2s">Clean Design</h4>
+                            <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.2s">Energy Efficient</h4>
                             <p class="description fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                               CleubSoft provide the clean Design of its product so that our client can use it very easily.As per your software requirements we have framed fully
-                                functioned software with all the user friendly features.
+                                Our product is designed with a latest and energy efficient technology  like real time energy monitoring.
                             </p>
                         </li>
                         <li>
-                            <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.4s">Fees Management System</h4>
+                            <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.4s">Easy Installation</h4>
                             <p class="description fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                                CleubSoft Added advance fee management system  for dyanamic and non dynamic fee 
-                                submission, along with the monthly, quarterly , half-yearly and yearly fees record.
-                            </p>
+                               Our all product is easy to install and Compatible with all types of appliances.                             </p>
                         </li>
                         <li>
-                            <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.6s">SMS Confirmation</h4>
+                            <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.6s">Comfortable</h4>
                             <p class="description fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.6s">
-                                CleubSoft also implemented the advance sms api for sending the information to student  through the software.It also provided the ciruclar sending and the recipt billing information.
+                               We care our customer so we provide our cleub product with maximum comfortability for that you can enjoy the technology
                             </p>
                         </li>
                     </ul>
@@ -341,7 +298,14 @@
 
                 <!-- Section Image -->
                 <div class="col-md-6 hidden-sm hidden-xs bounceInRight wow" data-wow-duration="1.3s">
-                    <img src="{% static 'cleub/images/s1.jpg' %}" class="img-responsive" alt="">
+                          <!-- Post Image -->
+                        <div class="image">
+
+                            <!-- iFrame Video -->
+                            <iframe  width="590" height="340" src="https://www.youtube.com/embed/mpxEm5YD2xM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                            <!-- /iFrame Video -->
+
+                        </div>
                 </div>
                 <!-- /Section Image -->
 
@@ -353,39 +317,7 @@
   
      
 
-  -->
-    <section id="contact" class="section">
-        <div class="container">
 
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title">Want to say <span class="text-theme">Hello?</span></h2>
-                        <p class="section-subtitle">It is a long established fact that a reader</p>
-                    </header>
-                
-            </div>
-             </div>
-             <form class="form-group" method="post">
-            <div class="row">
-
-            <div class="col-md-6 col-md-offset-3">
-            {% csrf_token %}
-            {{ form|crispy }}
-            </div>
-
-            </div>
-           <div class="row">
-                            <div class="form-group col-md-12 text-center">
-                                <button type="submit" class="btn btn-theme"><i class="fa fa-fw fa-paper-plane-o"></i> Send Message</button>
-                            </div>
-                        </div>
-
-                    </form>
-          </div>
-         </div>
-    </section>
 </main>
 <!-- /Main -->
 {% endblock %}
