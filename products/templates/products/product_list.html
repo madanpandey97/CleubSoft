@@ -3,10 +3,19 @@
 
 
 {% block content %}
+<section class="section-page-header">
+    <div class="container">
+        <div class="row">
 
-<h1>All Products <small><a href='{% url "categories" %}'>Categories</a></small></h1>
+<h3 style="text-align: center;">All Products</h3>
+<hr>
+        </div>
+
 
 {% include "products/products.html" with object_list=object_list %}
+</div>
+</div>
+</section>
 
 
 {% endblock %}

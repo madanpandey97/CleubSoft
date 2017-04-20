@@ -6,14 +6,14 @@
 <head>
 
     <!-- Page title -->
-    <title>CleubSoft</title>
+    <title>CleubLife | A smart home automation solution</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="{% static 'cleub/images/l.gif' %}">
 
     <!-- Style -->
     <link rel="stylesheet" href="{% static 'cleub/css/newstyle.css' %}">
@@ -21,16 +21,6 @@
     <!-- Style -->
     <link rel="stylesheet" href="{% static 'cleub/css/newcss.css' %}">
 
-  <!--  <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-persimmon.css' %}" title="theme-persimmon">
-   <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-atomic-tangerine.css' %}" title="theme-atomic-tangerine">
-    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-yellow-sea.css' %}" title="theme-yellow-sea">
-    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-rio-grande.css' %}" title="theme-rio-grande">
-    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-vida-loca.css' %}" title="theme-vida-loca">
-    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-mountain-meadow.css' %}" title="theme-mountain-meadow">
-    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-java.css' %}" title="theme-java">
-    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-mariner.css' %}" title="theme-mariner">
-    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-medium-purple.css' %}" title="theme-medium-purple">
-    <link rel="alternate stylesheet" href="{% static 'cleub/css/theme-lavender-magenta.css' %}" title="theme-lavender-magenta">-->
 </head>
 <body>
 
@@ -54,7 +44,7 @@
                     <!-- Feedback -->
                     <div class="col-md-7">
                         <a href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom" class="iframe-popup"><span class="icon icon_pin_alt"></span> Shri Mata Vaishno Devi University</a>
-                        <a href="#"><span class="icon icon_mail_alt"></span> support@cleubsoft.com</a>
+                        <a href="#"><span class="icon icon_mail_alt"></span> support@cleublife.com</a>
                         <a href="#"><span class="icon icon_phone"></span> +91 9858900094</a>
                     </div>
                     <!-- /Feedback -->
@@ -62,7 +52,7 @@
                     <!-- Social -->
                     <div class="col-md-5">
                         <ul class="social">
-                            <li><a href="#" class="fa fa-fw fa-facebook"></a></li>
+                            <li><a href="https://www.facebook.com/CleubInc/" class="fa fa-fw fa-facebook"></a></li>
                             <li><a href="#" class="fa fa-fw fa-twitter"></a></li>
                             <li><a href="#" class="fa fa-fw fa-google-plus"></a></li>
                            
@@ -103,11 +93,11 @@
                         <a href="#" class="brand">
 
                             <!-- Logo Big -->
-                            <img src="{% static 'cleub/images/logo.jpg' %}" class="logo-big" alt="">
+                            <img src="{% static 'cleub/images/l.gif' %}" class="logo-big" alt="" style="height: 55px;width:90px;">
                             <!-- /Logo Big -->
 
                             <!-- Logo Small -->
-                            <img src="{% static 'cleub/images/logo.jpg' %}" class="logo-small" alt="">
+                            <img src="{% static 'cleub/images/l.gif' %}" class="logo-small" alt="" style="height: 45px;width:60px;">
                           
 
                         </a>
@@ -120,22 +110,26 @@
                     <div id="main-menu" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{% url 'cleub:index' %}">Home</a></li>
-                            <li><a href="{% url 'cleub:about' %}">About</a></li>
+                            <li><a href='{% url "products" %}'>product</a></li>
                            <form class="navbar-form navbar-left">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
     
       </form>
-                            <li><a href="">Blog</a></li>
+                            <li><a href="">Bag&nbsp; <i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
                             <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {% if request.user.is_authenticated %}{{user}}  {% else %}Customer {% endif %} <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">Sign UP</a></li>
-           
+          {% if request.user.is_authenticated %}
+                  <li><a href="#">Show Order</a></li>
+                     <li><a href="/accounts/logout/">Logout</a></li>  
+                     {% else %}
+              <li><a href="/accounts/login/">Log In</a></li>
+            <li><a href="/accounts/signup/">Sign UP</a></li>
+           {% endif %}
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            
           </ul>
         </li>
                             
@@ -164,13 +158,14 @@
 
                 <!-- Footer Logo -->
                 <div class="logo">
-                    <img src="{% static 'cleub/images/cleubsoft.jpg' %}" alt="" style="height:50px; width: 100px;">
+                  <img src="{% static 'cleub/images/l.gif' %}" class="logo-small" alt="" style="height: 45px;width:60px;">
+                          
                 </div>
                 <!-- /Footer Logo -->
-
+                <hr>
                 <!-- Footer Text -->
                 <p class="text">
-                    It is a long established fact that a reader will be distracted by the readable.
+                    We Take Care Of Our Customer Requirements & Comfortibility.
                 </p>
                 <!-- /Footer Text -->
 
@@ -178,7 +173,7 @@
 
                 <!-- Copyright -->
                 <p class="copyright">
-                    Copyright &copy; 2016-2017 <strong>Cleubsoft</strong>
+                    Copyright &copy; 2016-2017 <strong>CleubLife</strong>
                 </p>
                 <!-- /Copyright -->
 
@@ -197,14 +192,14 @@
             <!-- Footer Column -->
             <div class="col-md-3 col-xs-6 footer-col">
 
-                <h3 class="title">Cleubsoft </h3>
+                <h3 class="title">CleubLife </h3>
 
              
                  <ul class="menu">
- <li><a href="#">Cleubsoft protocol</a></li>
+ <li><a href="#">CleubLife Term &amp; Conditions</a></li>
                     <li><a href="#">Send Feedback</a></li>
                     <li><a href="#">We are hiring</a></li>
-                    <li><a href="#">Term &amp; Condition</a></li>
+                    <li><a href="#">privacy policy</a></li>
                       </ul>
             </div>
             <!-- /Footer Column -->
@@ -217,11 +212,8 @@
                 <!-- Footer Menu -->
                 <ul class="menu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'cleub:about' %}">About</a></li>
+                    <li><a href="{% url 'cleub:contactus' %}">Contact</a></li>
                 </ul>
                 <!-- /Footer Menu -->
 
@@ -231,7 +223,7 @@
             <!-- Footer Column -->
             <div class="col-md-4 col-xs-6 footer-col">
 
-                <h3 class="title">Signup to <span class="text-theme">Newsletter</span></h3>
+                <h3 class="title">Know our <span class="text-theme">latest product</span></h3>
 
                 <!-- Footer Signup Form -->
                 <div class="signup-form">
